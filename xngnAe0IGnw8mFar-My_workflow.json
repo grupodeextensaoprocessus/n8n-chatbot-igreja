@@ -1,0 +1,68 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "97c3398d-e76b-4b20-ad3b-4deaf8fb6618",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "4257bb71-38b1-4e15-b448-ba64f4331464",
+      "name": "Webhook",
+      "webhookId": "97c3398d-e76b-4b20-ad3b-4deaf8fb6618"
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1091587484041997",
+        "recipientPhoneNumber": "+5561998898956",
+        "textBody": "Olá! Este é o chatbot da Igreja Missionária Cestinha da Misericórdia!",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        192,
+        0
+      ],
+      "id": "f09e5045-7afe-4c4f-8163-ba17e98ec2d6",
+      "name": "Send message",
+      "webhookId": "de9842f3-1a38-4c09-95a6-96ef0e4c64a5",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "rIU5UMHVlWVtJHQC",
+          "name": "WhatsApp account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Send message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "staticData": null,
+  "pinData": {},
+  "triggerCount": 1,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  }
+}
