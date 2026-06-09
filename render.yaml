@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: chatbot-igreja
+    runtime: image
+    repo: https://github.com/grupodeextensaoprocessus/n8n-chatbot-igreja
+    plan: free
+    image:
+      url: docker.n8n.io/n8nio/n8n
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: true
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: igreja2024
+      - key: N8N_PROTOCOL
+        value: https
+      - key: N8N_HOST
+        value: chatbot-igreja.onrender.com
+      - key: WEBHOOK_URL
+        value: https://chatbot-igreja.onrender.com
