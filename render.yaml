@@ -2,7 +2,6 @@ services:
   - type: web
     name: chatbot-igreja
     runtime: image
-    repo: https://github.com/grupodeextensaoprocessus/n8n-chatbot-igreja
     plan: free
     image:
       url: docker.n8n.io/n8nio/n8n
